@@ -17,6 +17,7 @@ public class ParkingLotStrategy {
 			strategyMaps.put("leave", ParkingLotService.class.getMethod("leave", String.class));
 			strategyMaps.put("park", ParkingLotService.class.getMethod("park", String.class));
 			strategyMaps.put("status", ParkingLotService.class.getMethod("status", String.class));
+			strategyMaps.put("getRegistrationNoAndCharge", ParkingLotService.class.getMethod("getRegistrationNoAndCharge", String.class));
 			
 		} catch (NoSuchMethodException e) {
 			// TODO Auto-generated catch block

@@ -9,4 +9,6 @@ public interface ParkingLotService {
 	public void park(String regNo, Integer duration);
 	
 	public void status();
+	
+	public void getRegistrationNoAndCharge(String regNo);
 }
