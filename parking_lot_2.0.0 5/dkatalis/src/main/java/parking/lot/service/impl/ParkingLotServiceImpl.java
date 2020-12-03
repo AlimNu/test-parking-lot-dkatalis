@@ -8,6 +8,7 @@ import java.util.Map;
 
 import parking.lot.model.Car;
 import parking.lot.service.ParkingLotService;
+import parking.lot.util.CommonUtil;
 
 public class ParkingLotServiceImpl implements ParkingLotService{
 	
@@ -107,7 +108,20 @@ public class ParkingLotServiceImpl implements ParkingLotService{
 
 	@Override
 	public void getRegistrationNoAndCharge(String regNo) {
-		// TODO Auto-generated method stub
+		if(this.PARKING_LOT_SIZE == 0) {
+			System.out.println("Sorry, parking lot is not created");
+			System.out.println();
+		}  else if (this.mapRegNoAndSlot.size() > 0) {
+				Car car;
+				if(this.mapRegNoAndSlot.containsKey(regNo)) {
+					String slotNo = this.mapRegNoAndSlot.get(regNo);
+					car = this.mapCar.get(slotNo);
+					System.out.println("Registration number "+regNo+" with Slot Number "+slotNo+" is free with Charge "+CommonUtil.countParkingCharge(car.getDuration()));
+				} else {
+					System.out.println(regNo+" not found");
+					System.out.println();
+				}
+		}
 		
 	}
 
