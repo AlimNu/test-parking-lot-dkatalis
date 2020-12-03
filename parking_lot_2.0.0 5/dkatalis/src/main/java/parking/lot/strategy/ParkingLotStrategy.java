@@ -20,8 +20,7 @@ public class ParkingLotStrategy {
 			strategyMaps.put("getRegistrationNoAndCharge", ParkingLotServiceImpl.class.getMethod("getRegistrationNoAndCharge", String.class));
 			
 		} catch (NoSuchMethodException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+			System.out.println("method not found");
 		} catch (SecurityException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
