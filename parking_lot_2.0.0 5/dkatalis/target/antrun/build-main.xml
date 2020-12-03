@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<project name="maven-antrun-" default="main"  >
+<target name="main">
+  <zip destfile="E:\DATA\Github\test parking lot\parking_lot_2.0.0 5\dkatalis\target/app.zip">
+    <zipfileset dir="E:\DATA\Github\test parking lot\parking_lot_2.0.0 5\dkatalis\target/docker"/>
+    <zipfileset includes="dkatalis.jar" dir="E:\DATA\Github\test parking lot\parking_lot_2.0.0 5\dkatalis\target"/>
+  </zip>
+</target>
+</project>
