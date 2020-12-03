@@ -1,16 +1,14 @@
 package parking.lot.service.impl;
 
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 
 import parking.lot.model.Car;
-import parking.lot.service.ParkingLotService;
 import parking.lot.util.CommonUtil;
 
-public class ParkingLotServiceImpl implements ParkingLotService{
+public class ParkingLotServiceImpl {
 	
 	int PARKING_LOT_SIZE=0;
 	
@@ -106,7 +104,6 @@ public class ParkingLotServiceImpl implements ParkingLotService{
 		}
 	}
 
-	@Override
 	public void getRegistrationNoAndCharge(String regNo) {
 		if(this.PARKING_LOT_SIZE == 0) {
 			System.out.println("Sorry, parking lot is not created");

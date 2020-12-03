@@ -4,7 +4,7 @@ import java.lang.reflect.Method;
 import java.util.HashMap;
 import java.util.Map;
 
-import parking.lot.service.ParkingLotService;
+import parking.lot.service.impl.ParkingLotServiceImpl;
 
 public class ParkingLotStrategy {
 	
@@ -13,11 +13,11 @@ public class ParkingLotStrategy {
 	public ParkingLotStrategy() {
 		strategyMaps =new HashMap<String, Method>();
 		try {
-			strategyMaps.put("createParkingLot", ParkingLotService.class.getMethod("createParkingLot", String.class));
-			strategyMaps.put("leave", ParkingLotService.class.getMethod("leave", String.class));
-			strategyMaps.put("park", ParkingLotService.class.getMethod("park", String.class));
-			strategyMaps.put("status", ParkingLotService.class.getMethod("status", String.class));
-			strategyMaps.put("getRegistrationNoAndCharge", ParkingLotService.class.getMethod("getRegistrationNoAndCharge", String.class));
+			strategyMaps.put("createParkingLot", ParkingLotServiceImpl.class.getMethod("createParkingLot", String.class));
+			strategyMaps.put("leave", ParkingLotServiceImpl.class.getMethod("leave", String.class));
+			strategyMaps.put("park", ParkingLotServiceImpl.class.getMethod("park", String.class));
+			strategyMaps.put("status", ParkingLotServiceImpl.class.getMethod("status", String.class));
+			strategyMaps.put("getRegistrationNoAndCharge", ParkingLotServiceImpl.class.getMethod("getRegistrationNoAndCharge", String.class));
 			
 		} catch (NoSuchMethodException e) {
 			// TODO Auto-generated catch block
